@@ -53,6 +53,15 @@ function displayBooks(){
     removeBtn.setAttribute("data-target", book.ID);
     removeBtn.addEventListener(("click") , removeBook);
     tableRow.appendChild(removeBtn);
+
+    const readStatus = document.createElement("button");
+    readStatus.textContent = "Change Read";
+    readStatus.addEventListener(("click"), () => {
+      book.toggleReadStatus();
+      bookData.textContent = "";
+      displayBooks();
+    });
+    tableRow.appendChild(readStatus);
   }
 }
 
@@ -71,6 +80,15 @@ function removeBook(e) {
     }
   }
 }
+
+Book.prototype.toggleReadStatus = function () {
+  if(this.read == "Yes"){
+    this.read = "No";
+  }else {
+    this.read = "Yes";
+  }
+};
+
 
 newBook.addEventListener("click" , (event) => {
     dialog.showModal();
