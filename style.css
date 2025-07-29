@@ -45,6 +45,7 @@ button {
     color: white;
     font-family: "roboto-bold", sans-serif;
     border-radius: 4px;
+    margin: 5px;
 }
 
 .addBook {

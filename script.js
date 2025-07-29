@@ -20,6 +20,7 @@ function Book(title, author, pages, read) {
 
 document.getElementById("bookForm").addEventListener("submit", function(e) {
   e.preventDefault();
+  const form = e.target;
   const formTitle = document.getElementById("title").value;
   const formAuthor = document.getElementById("author").value;
   const formPages = document.getElementById("pages").value;
@@ -27,9 +28,11 @@ document.getElementById("bookForm").addEventListener("submit", function(e) {
   const formRead = hasRead ? hasRead.value : 'Not selected';
 
   addBookToLibrary(formTitle, formAuthor, formPages, formRead);
+  form.reset();
   bookData.textContent = "";
   displayBooks();
   dialog.close();
+
 });
 
 function addBookToLibrary(title, author, pages, read) {
