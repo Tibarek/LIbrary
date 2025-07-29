@@ -26,11 +26,34 @@ body {
     box-sizing: border-box;
 }
 
-h1 {
+.header {
+    align-items: center;
+    display: flex;
     background-color: brown;
     margin: 0;
     color: white;
     padding: 20px;
+}
+
+h1 {
+    flex: auto;
+}
+
+button {
+    border: none;
+    background-color: brown;
+    color: white;
+    font-family: "roboto-bold", sans-serif;
+    border-radius: 4px;
+}
+
+.addBook {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.addBook:hover {
+    background-color: #c8c8c8;
 }
 
 table {
@@ -61,4 +84,38 @@ tr:nth-child(even) td {
 
 tr:nth-child(odd) td {
     background-color: rgb(245,245,245);
+}
+
+dialog {
+    border: 2px solid brown;
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: "roboto-regular", sans-serif;
+}
+
+input {
+    margin-bottom: 8px;
+    outline: none;
+}
+.form-btn{
+    margin-top: 4px;
+}
+.submit, .close {
+    padding: 5px 16px;
+}
+
+.close {
+    margin-left: 4px;
+}
+
+.radio-yes {
+    margin-right: 15px;
+}
+
+.radio-no {
+    margin-right: 20px;
 }
