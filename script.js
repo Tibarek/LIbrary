@@ -6,15 +6,14 @@ const submitBook = document.querySelector(".submit");
 const bookData = document.querySelector(".books");
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-    if(!new.target){
-        throw Error("You must use the 'new' operator to call the constructor");
-    }
+class Book {
+  constructor (title, author, pages, read){
     this.ID = crypto.randomUUID();
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
+  }
 }
 
 
